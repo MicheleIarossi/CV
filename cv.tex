@@ -1,0 +1,146 @@
+%
+%    CV in LaTeX and Calibri font
+%.   Based on https://www.careercup.com/resume
+%    Copyright (C) 2022 Michele Iarossi - michele@mathsophy.com
+%
+%    This program is free software: you can redistribute it and/or modify
+%    it under the terms of the GNU General Public License as published by
+%    the Free Software Foundation version 3 of the License.
+%
+%    This program is distributed in the hope that it will be useful,
+%    but WITHOUT ANY WARRANTY; without even the implied warranty of
+%    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+%    GNU General Public License for more details.
+%
+%    You should have received a copy of the GNU General Public License
+%    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+%
+
+% Preamble starts here:
+\documentclass[11pt]{article}
+
+% Set document margins
+\usepackage[left=2cm,top=1.5cm,right=2cm,bottom=1.5cm]{geometry} 
+
+% Remove paragraph indentation
+\usepackage[parfill]{parskip}
+% and no space between paragraphs
+\setlength{\parskip}{0cm}
+
+% Calibri font
+\usepackage{fontspec}
+\setmainfont{Calibri}
+
+% British hyphenation
+\usepackage[british]{babel}
+
+% Header line: adapted from egreg's answer at
+% https://tex.stackexchange.com/questions/55472/how-to-make-text-aligned-left-center-right-in-the-same-line
+\newcommand{\headerline}[3]{%
+  \makebox[0cm][l]{#1}%
+  \makebox[\textwidth][c]{#2}%
+  \makebox[0cm][r]{#3}}
+
+% CV title
+\newcommand{\cvtitle}[3]{%
+\headerline{\small #1}{\huge\textbf{#2}}{\small #3}}
+
+% CV section
+\newcommand{\cvsection}[1]{%
+\textbf{#1}\smallskip\hrule\smallskip}
+
+% CV list
+\newenvironment{cvlist}[1][$\cdot$]%
+{\begin{list}{#1}{\setlength{\labelwidth}{2cm}%
+\setlength{\leftmargin}{0.5cm}\setlength{\labelsep}{0.2cm}\setlength{\partopsep}{0cm}%
+\setlength{\rightmargin}{0.5cm}\setlength{\parsep}{0cm}\setlength{\topsep}{0cm}%
+\setlength{\itemsep}{0cm}}}%
+{\end{list}}
+
+% This is the body: text mixed with commands
+\begin{document}
+
+% Suppress page numbers
+\pagestyle{empty} 
+
+% Title header
+\cvtitle{Munich (Germany)}{Mr Michele Iarossi}{michele@mathsophy.com}
+
+\bigskip
+
+\cvsection{About}
+\begin{cvlist}
+\item Seasoned software engineer with 15+ years of experience in the automotive sector
+\item Focus on embedded software development and integration
+\item Expertise in AUTOSAR and diagnostic protocols
+\item Thrive on leading, mentoring and working with multicultural teams in complex and challenging projects
+\item Strong communication skills in German, English, French and Italian
+\end{cvlist}
+
+\bigskip
+
+\cvsection{Employment}
+\headerline{\textbf{Expert}}{\textbf{Elektrobit (Germany)}}{\textbf{2012 -- \hspace{4ex} }}
+\begin{cvlist}[]
+\item Develop software for automotive electronic control units based on the AUTOSAR standard
+\end{cvlist}
+\medskip
+\headerline{\textbf{Software Engineer}}{\textbf{Magneti Marelli / Da Vinci Engineering (Germany)}}{\textbf{2009 -- 2012}}
+\begin{cvlist}[]
+\item Developed software for automotive instrument clusters based on double microcontroller architecture
+\end{cvlist}
+\medskip
+\headerline{\textbf{Software Engineer}}{\textbf{Dune (Italy)}}{\textbf{2001 -- 2009}}
+\begin{cvlist}[]
+\item Implemented algorithms on digital signal processors (DSP) for signal processing applications
+\end{cvlist}
+
+\bigskip
+
+\cvsection{Education}
+\headerline{\textbf{Rome (Italy)}}{\textbf{Sapienza University}}{\textbf{1993 -- 1999}}
+\begin{cvlist}
+\item \emph{Laurea cum Laude} in Electronic Engineering (July 1999)
+\item Faculty of Electronic Engineering and InfoCom Department
+\end{cvlist}
+
+\bigskip
+
+\cvsection{Technical Experience}
+\begin{cvlist}
+\item \textbf{Diagnostic expert group} (2022): Lead the diagnostic expert group in providing solutions to diagnostic related issues
+\item \textbf{AUDI High Computing Performance ECU} (2020 --2022): Provide AUTOSAR support for diagnostic and bootloader topics
+\item \textbf{BMW Medium and Front Range Radars} (2017 -- 2019): Integrated AUTOSAR basic software modules and communication stacks (Ethernet, CAN)
+\item \textbf{VW Generic Bootloader} (2012 -- 2015): Developed and maintained the VW flash bootloader
+\item \textbf{Porsche Instrument Cluster} (2009 -- 2012): Implemented end of line routines for driving HW components
+\item \textbf{Wide Open/Super Het receivers} (2008 -- 2009): Designed the control SW in C++ running under the Wind River VxWorks real-time operating system
+\item \textbf{Voice/Data Crypto device} (2004 -- 2009): Developed in assembler the generation of digital (300, 600, 1200, 2400 bps) and analog (DQPSK modulation) waveforms running on a fixed-point DSP
+\item \textbf{EU Project} (2001 -- 2003): Evaluated signal processing algorithms for UMTS terminals in MATLAB
+\end{cvlist}
+
+\bigskip
+
+\cvsection{Additional Experience}
+\begin{cvlist}
+\item \textbf{Patent Examiner} (2016 -- 2017) at the European Patent Office (EPO) in The Hague (The Netherlands)
+\item \textbf{Reviewer} (2002) for the IEEE Potentials magazine
+\end{cvlist}
+
+\bigskip
+
+\cvsection{Computer Languages and Technologies}
+\begin{cvlist}
+\item Embedded C (proficient); Python, C++, MATLAB, Assembler (prior experiences)
+\item EB tresos Studio, Vector CANoe; Automotive Ethernet, Wireshark
+\item ISO diagnostic protocols 14229 (UDS) and 13400 (DOIP)
+\item Lauterbach TRACE32 and Green Hills MULTI debuggers; SVN, Git; Jenkins; \LaTeX, MS Office
+\end{cvlist}
+
+\bigskip
+
+\cvsection{Portfolio}
+\begin{cvlist}
+\item \textbf{Python code snippets} https://www.mathsophy.com/python-codesnippets
+\item \textbf{Binary search trees} https://www.mathsophy.com/post/binary-search-trees-and-avl-trees
+\end{cvlist}
+\end{document}
