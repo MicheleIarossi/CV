@@ -1,6 +1,7 @@
 %
-%    CV in LaTeX and Calibri font
-%.   Based on https://www.careercup.com/resume
+%    One page CV in LaTeX
+%.   Based on the one page resume provided by Gayle Laakmann McDowell on
+%    her website https://www.careercup.com/resume
 %    Copyright (C) 2022 Michele Iarossi - michele@mathsophy.com
 %
 %    This program is free software: you can redistribute it and/or modify
@@ -34,16 +35,16 @@
 % British hyphenation
 \usepackage[british]{babel}
 
-% Header line: adapted from egreg's answer at
+% CV header line: adapted from egreg's answer at
 % https://tex.stackexchange.com/questions/55472/how-to-make-text-aligned-left-center-right-in-the-same-line
-\newcommand{\headerline}[3]{%
+\newcommand{\cvheaderline}[3]{%
   \makebox[0cm][l]{#1}%
   \makebox[\textwidth][c]{#2}%
   \makebox[0cm][r]{#3}}
 
 % CV title
 \newcommand{\cvtitle}[3]{%
-\headerline{\small #1}{\huge\textbf{#2}}{\small #3}}
+\cvheaderline{\small #1}{\huge\textbf{#2}}{\small #3}}
 
 % CV section
 \newcommand{\cvsection}[1]{%
@@ -80,17 +81,17 @@
 \bigskip
 
 \cvsection{Employment}
-\headerline{\textbf{Expert}}{\textbf{Elektrobit (Germany)}}{\textbf{2012 -- \hspace{4ex} }}
+\cvheaderline{\textbf{Expert}}{\textbf{Elektrobit (Germany)}}{\textbf{2012 -- \hspace{4ex} }}
 \begin{cvlist}[]
 \item Develop software for automotive electronic control units based on the AUTOSAR standard
 \end{cvlist}
 \medskip
-\headerline{\textbf{Software Engineer}}{\textbf{Magneti Marelli / Da Vinci Engineering (Germany)}}{\textbf{2009 -- 2012}}
+\cvheaderline{\textbf{Software Engineer}}{\textbf{Magneti Marelli / Da Vinci Engineering (Germany)}}{\textbf{2009 -- 2012}}
 \begin{cvlist}[]
 \item Developed software for automotive instrument clusters based on double microcontroller architecture
 \end{cvlist}
 \medskip
-\headerline{\textbf{Software Engineer}}{\textbf{Dune (Italy)}}{\textbf{2001 -- 2009}}
+\cvheaderline{\textbf{Software Engineer}}{\textbf{Dune (Italy)}}{\textbf{2001 -- 2009}}
 \begin{cvlist}[]
 \item Implemented algorithms on digital signal processors (DSP) for signal processing applications
 \end{cvlist}
@@ -98,7 +99,7 @@
 \bigskip
 
 \cvsection{Education}
-\headerline{\textbf{Rome (Italy)}}{\textbf{Sapienza University}}{\textbf{1993 -- 1999}}
+\cvheaderline{\textbf{Rome (Italy)}}{\textbf{Sapienza University}}{\textbf{1993 -- 1999}}
 \begin{cvlist}
 \item \emph{Laurea cum Laude} in Electronic Engineering (July 1999)
 \item Faculty of Electronic Engineering and InfoCom Department
