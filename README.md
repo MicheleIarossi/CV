@@ -4,8 +4,8 @@ This is a LaTeX template for generating a one page CV.
 
 One of the main benefits of LaTeX is its capability of producing extremely neat and tidy typeset documents.
 
-The template `cv.tex` that you can download here is based on the one page resume provided by Gayle Laakmann McDowell on her website https://www.careercup.com/resume. I have kept the same layout but reimplemented commands and enviroments on my own, with much simpler
-LaTeX definitions and without recurring to `vspace` commands all the time. The final result is more or less the same.
+The template `cv.tex` that you can download here is based on the one page resume provided by Gayle Laakmann McDowell on her website https://www.careercup.com/resume. I have kept the same layout but reimplemented commands and enviroments on my own with much simpler
+LaTeX definitions and without recurring to `\vspace` commands all the time. The final result is more or less the same.
 
 Hope you like the template and find it easy to use!
 
@@ -62,9 +62,9 @@ The environment:
 
 `\end{cvlist}`
 
-produces a compact list of items which are typeset without any of the extra spacing characterising the conventional lists. The default label is $\cdot$ but you can change with the optional label parameter if you want. I use this environment for providing any type of text such as job descriptions or skills.
+produces a compact list of items which are typeset without any of the extra spacing characterising the conventional list. The default label is $\cdot$ but you can change it with the optional label parameter if you want. I use this environment for providing any type of text such as job descriptions or skills.
 
-# Separating your sections properly
+# Separating your sections
 
 You might be tempted of using `\vspace` for separating your sections vertically but there is actually no need to use it. 
 
